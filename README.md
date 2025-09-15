@@ -14,6 +14,7 @@ public int sumLastNums(int x) {
         int secondNum = (x / 10) % 10; 
         return firstNum + secondNum;
     }
+```
 - `boolean isPositive(int x)` — проверка, положительное ли число.
 ```java
 public boolean isPositive(int x) {
