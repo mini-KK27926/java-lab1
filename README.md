@@ -7,7 +7,7 @@
 ## Структура заданий
 
 ### 1. Методы
-- `int sumLastNums(int x)` — сумма двух последних цифр числа.
+- `int sumLastNums(int x)` — сумма двух последних цифр числа
 ```java
 public int sumLastNums(int x) {
         int firstNum = x % 10; 
@@ -15,13 +15,13 @@ public int sumLastNums(int x) {
         return firstNum + secondNum;
     }
 ```
-- `boolean isPositive(int x)` — проверка, положительное ли число.
+- `boolean isPositive(int x)` — проверка, положительное ли число
 ```java
 public boolean isPositive(int x) {
         return x > 0;
     }
 ```
-- `boolean isUpperCase(char x)` — проверка, является ли символ заглавной латинской буквой.
+- `boolean isUpperCase(char x)` — проверка, является ли символ заглавной латинской буквой
 ```java
 public boolean isUpperCase(char x) {
 
@@ -35,7 +35,7 @@ public boolean isDivisor (int a, int b){
         return a % b == 0;
     }
 ```
-- `int lastNumSum(int a, int b)` — сумма последних цифр двух чисел.
+- `int lastNumSum(int a, int b)` — сумма последних цифр двух чисел
 ```java
 - public int lastNumSum(int a, int b){
         return (a % 10) + (b % 10);
@@ -88,7 +88,7 @@ public boolean sum3 (int x, int y, int z){
         }
     }
  ```
-- `void printDays(String x)` — вывод всех дней недели, начиная с указанного (или сообщение об ошибке).
+- `void printDays(String x)` — вывод всех дней недели, начиная с указанного (или сообщение об ошибке)
 ```java
 public void printDays (String x){
         switch (x.toLowerCase()) {
