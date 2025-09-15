@@ -36,11 +36,11 @@ public boolean isDivisor (int a, int b){
     }
 ```
 - `int lastNumSum(int a, int b)` — сумма последних цифр двух чисел.
-- ```java
+```java
 - public int lastNumSum(int a, int b){
         return (a % 10) + (b % 10);
     }
-  ```
+```
 
 ### 2. Условия
 - `double safeDiv(int x, int y)` — безопасное деление (при `y=0` возвращает `0`)
