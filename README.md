@@ -9,15 +9,11 @@
 ### 1. Методы
 - `int sumLastNums(int x)` — сумма двух последних цифр числа.
 ```java
-package ru.university.lab1;
-
-public class Main {
 - public int sumLastNums(int x) {
         int firstNum = x % 10; //1346  6
         int secondNum = (x / 10) % 10; //4
         return firstNum + secondNum; //4 + 6
     }
-}
 - `boolean isPositive(int x)` — проверка, положительное ли число.  
 - `boolean isUpperCase(char x)` — проверка, является ли символ заглавной латинской буквой.  
 - `boolean isDivisor(int a, int b)` — проверка, делится ли одно число на другое без остатка.  
