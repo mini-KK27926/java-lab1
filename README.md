@@ -20,19 +20,27 @@ public int sumLastNums(int x) {
 public boolean isPositive(int x) {
         return x > 0;
     }
+```
 - `boolean isUpperCase(char x)` — проверка, является ли символ заглавной латинской буквой.
 ```java
 public boolean isUpperCase(char x) {
 
         return x >= 'A' && x <= 'Z';
-    }  
+    }
+```
 - `boolean isDivisor(int a, int b)` — проверка, делится ли одно число на другое без остатка
 ```java
 public boolean isDivisor (int a, int b){
 
         return a % b == 0;
-    }  
-- `int lastNumSum(int a, int b)` — сумма последних цифр двух чисел.  
+    }
+```
+- `int lastNumSum(int a, int b)` — сумма последних цифр двух чисел.
+- ```java
+- public int lastNumSum(int a, int b){
+        return (a % 10) + (b % 10);
+    }
+  ```
 
 ### 2. Условия
 - `double safeDiv(int x, int y)` — безопасное деление (при `y=0` возвращает `0`)
@@ -43,7 +51,8 @@ public double safeDiv (int x, int y){
         }else{
             return (double) x /y;
         }
-    } 
+    }
+ ```
 - `String makeDecision(int x, int y)` — сравнение двух чисел (`>`, `<`, `=`)
 ```java
  public String makeDecision (int x, int y){
@@ -55,12 +64,14 @@ public double safeDiv (int x, int y){
             return x + "=" + y;
         }
     }
+ ```
 - `boolean sum3(int x, int y, int z)` — проверка, можно ли сложением двух чисел получить третье
 ```java
 public boolean sum3 (int x, int y, int z){
 
         return x + y == z || x + z == y || z + y == x;
     }
+ ```
 - `String age(int x)` — корректное склонение слова «год/года/лет»
 ```java
   public String age (int x){
@@ -76,6 +87,7 @@ public boolean sum3 (int x, int y, int z){
             return x + " лет";
         }
     }
+ ```
 - `void printDays(String x)` — вывод всех дней недели, начиная с указанного (или сообщение об ошибке).
 ```java
 public void printDays (String x){
@@ -99,6 +111,7 @@ public void printDays (String x){
                 System.out.println("это не день недели");
         }
     }
+ ```
 
 ### 3. Циклы
 - `String reverseListNums(int x)` — числа от `x` до `0` в строке
@@ -113,6 +126,7 @@ public void printDays (String x){
         }
         return stringBuilder.toString();
     }
+ ```
 - `int pow(int x, int y)` — возведение числа в степень
 ```java
   public int pow (int x, int y){
@@ -135,6 +149,7 @@ public boolean equalNum (int x){
         }
         return true;
     }
+ ```
 - `void leftTriangle(int x)` — вывод треугольника из символов `*`
 ```java
 public void leftTriangle(int x) {
@@ -145,6 +160,7 @@ public void leftTriangle(int x) {
             System.out.println();
         }
     }
+ ```
 - `void guessGame()` — игра «Угадай число» (от 0 до 9)
 ```java
 public void guessGame(){
@@ -174,11 +190,82 @@ public void guessGame(){
             }
         }
     } 
-
+ ```
 ### 4. Массивы
-- `int findLast(int[] arr, int x)` — поиск индекса последнего вхождения числа в массив.  
-- `int[] add(int[] arr, int x, int pos)` — добавление элемента в массив на позицию.  
-- `void reverse(int[] arr)` — реверс массива.  
-- `int[] concat(int[] arr1, int[] arr2)` — объединение двух массивов.  
-- `int[] deleteNegative(int[] arr)` — удаление отрицательных элементов из массива.  
+- `int findLast(int[] arr, int x)` — поиск индекса последнего вхождения числа в массив
+```java
+- public int findLast(int[] arr, int x) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
+```
+- `int[] add(int[] arr, int x, int pos)` — добавление элемента в массив на позицию
+```java
+public int[] add(int[] arr, int x, int pos) {
+        int[] newArr = new int[arr.length + 1];
+        for (int i = 0; i < pos; i++) {
+            newArr[i] = arr[i];
+        }
+        newArr[pos] = x;
+        for (int i = pos; i < arr.length; i++) {
+            newArr[i + 1] = arr[i];
+        }
+        return newArr;
+    }
+```
+- `void reverse(int[] arr)` — переворот массива
+```java
+public void reverse(int[] arr) {
+        int leftNum = 0;
+        int rightNum = arr.length - 1;
+
+        while (leftNum < rightNum) {
+            int temp = arr[leftNum];
+            arr[leftNum] = arr[rightNum];
+            arr[rightNum] = temp;
+
+            leftNum++;
+            rightNum--;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+```
+- `int[] concat(int[] arr1, int[] arr2)` — объединение двух массивов
+```java
+public int[] concat(int[] arr1, int[] arr2) {
+        int[] result = new int[arr1.length + arr2.length];
+
+        for (int i = 0; i < arr1.length; i++) {
+            result[i] = arr1[i];
+        }
+        for (int i = 0; i < arr2.length; i++) {
+            result[arr1.length + i] = arr2[i];
+        }
+        return result;
+    }
+```
+- `int[] deleteNegative(int[] arr)` — удаление отрицательных элементов из массива
+```java
+public int[] deleteNegative(int[] arr) {
+        int count = 0;
+        for (int num : arr) {
+            if (num >= 0) {
+                count++;
+            }
+        }
+
+        int[] result = new int[count];
+        int index = 0;
+        for (int num : arr) {
+            if (num >= 0) {
+                result[index++] = num;
+            }
+        }
+        return result;
+    }
+```
 
