@@ -7,6 +7,7 @@
 ## Структура заданий
 
 ### 1. Методы
+- Задача № 2
 - `int sumLastNums(int x)` — сумма двух последних цифр числа
 ```java
 public int sumLastNums(int x) {
@@ -15,12 +16,17 @@ public int sumLastNums(int x) {
         return firstNum + secondNum;
     }
 ```
+- Ввод: 1357 --> Вывод: 12
+- Ввод: 81 --> Вывод: 9
+- Ввод: 7 --> Вывод: Ошибка
 - `boolean isPositive(int x)` — проверка, положительное ли число
 ```java
 public boolean isPositive(int x) {
         return x > 0;
     }
 ```
+- Ввод: 7 --> Вывод: true
+- Ввод: -7 --> Вывод: false
 - `boolean isUpperCase(char x)` — проверка, является ли символ заглавной латинской буквой
 ```java
 public boolean isUpperCase(char x) {
@@ -28,6 +34,10 @@ public boolean isUpperCase(char x) {
         return x >= 'A' && x <= 'Z';
     }
 ```
+- Ввод: s --> Вывод: false
+- Ввод: л --> Вывод: false
+- Ввод: Л --> Вывод: false
+- Ввод: S --> Вывод: true
 - `boolean isDivisor(int a, int b)` — проверка, делится ли одно число на другое без остатка
 ```java
 public boolean isDivisor (int a, int b){
@@ -35,6 +45,10 @@ public boolean isDivisor (int a, int b){
         return a % b == 0;
     }
 ```
+- Ввод: 3 --> Вывод: false
+-       2
+- Ввод: 10 --> Вывод: true
+-        5
 - `int lastNumSum(int a, int b)` — сумма последних цифр двух чисел
 ```java
 - public int lastNumSum(int a, int b){
