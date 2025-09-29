@@ -196,8 +196,8 @@ public boolean equalNum (int x){
         return true;
     }
  ```
-Ввод: 11111 --> Вывод: true
-Ввод: 11122 --> Вывод: false
+- Ввод: 11111 --> Вывод: true
+- Ввод: 11122 --> Вывод: false
 
 - `void leftTriangle(int x)` — вывод треугольника из символов `*`
 ```java
@@ -210,6 +210,9 @@ public void leftTriangle(int x) {
         }
     }
  ```
+- Ввод: 1 --> Вывод: *
+- Ввод: 2 --> Вывод: *
+-                    **
 - `void guessGame()` — игра «Угадай число» (от 0 до 9)
 ```java
 public void guessGame(){
@@ -240,6 +243,8 @@ public void guessGame(){
         }
     } 
  ```
+- Ввод: 2 --> Вывод: Вы не угадали, введите число от 0 до 9
+- Ввод: 1 --> Вывод: Вы угадали!Вы отгадали число за 2 попытки(ок)
 ### 4. Массивы
 - `int findLast(int[] arr, int x)` — поиск индекса последнего вхождения числа в массив
 ```java
@@ -252,6 +257,9 @@ public void guessGame(){
         return -1;
     }
 ```
+- [1,2,3,1,5]
+- Ввод: 3 --> Вывод: Последнее вхождение числа 3 имеет индекс: 2
+
 - `int[] add(int[] arr, int x, int pos)` — добавление элемента в массив на позицию
 ```java
 public int[] add(int[] arr, int x, int pos) {
@@ -266,6 +274,9 @@ public int[] add(int[] arr, int x, int pos) {
         return newArr;
     }
 ```
+- [3, 3, 3]
+- Ввод: 1 --> Вывод: [3, 3, 1, 3]
+
 - `void reverse(int[] arr)` — переворот массива
 ```java
 public void reverse(int[] arr) {
@@ -283,6 +294,8 @@ public void reverse(int[] arr) {
         System.out.println(Arrays.toString(arr));
     }
 ```
+- Ввод: [1,2,3] --> Вывод: [3,2,1]
+
 - `int[] concat(int[] arr1, int[] arr2)` — объединение двух массивов
 ```java
 public int[] concat(int[] arr1, int[] arr2) {
@@ -297,6 +310,8 @@ public int[] concat(int[] arr1, int[] arr2) {
         return result;
     }
 ```
+- Ввод: [1,2,3] [4,1,8] --> Вывод: [1,2,3,4,1,8]
+
 - `int[] deleteNegative(int[] arr)` — удаление отрицательных элементов из массива
 ```java
 public int[] deleteNegative(int[] arr) {
@@ -317,4 +332,5 @@ public int[] deleteNegative(int[] arr) {
         return result;
     }
 ```
+- Ввод: [1,2,-3,4,-2,2,-5] --> Вывод: [1,2,4,2]
 
