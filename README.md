@@ -19,6 +19,7 @@ public int sumLastNums(int x) {
 - Ввод: 1357 --> Вывод: 12
 - Ввод: 81 --> Вывод: 9
 - Ввод: 7 --> Вывод: Ошибка
+
 - `boolean isPositive(int x)` — проверка, положительное ли число
 ```java
 public boolean isPositive(int x) {
@@ -27,6 +28,7 @@ public boolean isPositive(int x) {
 ```
 - Ввод: 7 --> Вывод: true
 - Ввод: -7 --> Вывод: false
+
 - `boolean isUpperCase(char x)` — проверка, является ли символ заглавной латинской буквой
 ```java
 public boolean isUpperCase(char x) {
@@ -38,6 +40,7 @@ public boolean isUpperCase(char x) {
 - Ввод: л --> Вывод: false
 - Ввод: Л --> Вывод: false
 - Ввод: S --> Вывод: true
+
 - `boolean isDivisor(int a, int b)` — проверка, делится ли одно число на другое без остатка
 ```java
 public boolean isDivisor (int a, int b){
@@ -45,16 +48,19 @@ public boolean isDivisor (int a, int b){
         return a % b == 0;
     }
 ```
-- Ввод: 3 --> Вывод: false
--       2
-- Ввод: 10 --> Вывод: true
--        5
+- Ввод: 3 2 --> Вывод: false
+- Ввод: 10 5 --> Вывод: true
+
 - `int lastNumSum(int a, int b)` — сумма последних цифр двух чисел
 ```java
 - public int lastNumSum(int a, int b){
         return (a % 10) + (b % 10);
     }
 ```
+- Ввод: 72 35 --> Вывод: 7
+- Ввод: 12 --> Вывод: 9
+- Ввод: 16 --> Вывод: 15
+- Ввод: 111 --> Вывод: 6
 
 ### 2. Условия
 - `double safeDiv(int x, int y)` — безопасное деление (при `y=0` возвращает `0`)
@@ -67,6 +73,10 @@ public double safeDiv (int x, int y){
         }
     }
  ```
+- Ввод: 6 3 --> Вывод: 2.0
+- Ввод: 5 0 --> Вывод: 0
+
+
 - `String makeDecision(int x, int y)` — сравнение двух чисел (`>`, `<`, `=`)
 ```java
  public String makeDecision (int x, int y){
@@ -79,6 +89,10 @@ public double safeDiv (int x, int y){
         }
     }
  ```
+- Ввод: 5 7 --> Вывод: 5<7
+- Ввод: 9 2 --> Вывод: 9>2
+- Ввод: 8 8 --> Вывод: 8=8
+
 - `boolean sum3(int x, int y, int z)` — проверка, можно ли сложением двух чисел получить третье
 ```java
 public boolean sum3 (int x, int y, int z){
@@ -86,6 +100,10 @@ public boolean sum3 (int x, int y, int z){
         return x + y == z || x + z == y || z + y == x;
     }
  ```
+- Ввод: 1 2 3 --> Вывод: true
+- Ввод: 3 1 2 --> Вывод: true
+- Ввод: 5 3 7 --> Вывод: false
+
 - `String age(int x)` — корректное склонение слова «год/года/лет»
 ```java
   public String age (int x){
@@ -102,6 +120,10 @@ public boolean sum3 (int x, int y, int z){
         }
     }
  ```
+- Ввод: 3 --> Вывод: 3 года
+- Ввод: 11 --> Вывод: 11 лет
+- Ввод: 32 --> Вывод: 32 года
+
 - `void printDays(String x)` — вывод всех дней недели, начиная с указанного (или сообщение об ошибке)
 ```java
 public void printDays (String x){
@@ -126,9 +148,14 @@ public void printDays (String x){
         }
     }
  ```
+- Ввод: четверг --> Вывод: четверг
+пятница
+суббота
+воскресенье
+- Ввод: ысифоыв --> Вывод: это не день недели
 
 ### 3. Циклы
-- `String reverseListNums(int x)` — числа от `x` до `0` в строке
+- `String reverseListNums(int x)` — выводит числа от `x` до `0` в строке
 ```java
   public String reverseListNums(int x) {
         StringBuilder stringBuilder = new StringBuilder();
@@ -141,6 +168,8 @@ public void printDays (String x){
         return stringBuilder.toString();
     }
  ```
+- Ввод: 5 --> Вывод: 5 4 3 2 1 0
+
 - `int pow(int x, int y)` — возведение числа в степень
 ```java
   public int pow (int x, int y){
@@ -150,6 +179,9 @@ public void printDays (String x){
         }
         return result;
     }
+- Ввод: 2 3 --> Вывод: 8
+- Ввод: 3 2--> Вывод: 9
+
 - `boolean equalNum(int x)` — проверка, все ли цифры числа одинаковые
 ```java
 public boolean equalNum (int x){
@@ -164,6 +196,9 @@ public boolean equalNum (int x){
         return true;
     }
  ```
+Ввод: 11111 --> Вывод: true
+Ввод: 11122 --> Вывод: false
+
 - `void leftTriangle(int x)` — вывод треугольника из символов `*`
 ```java
 public void leftTriangle(int x) {
